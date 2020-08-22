@@ -1,0 +1,21 @@
+.card-list
+{
+    border: 1px solid rgb(14, 13, 13);
+    box-shadow: 5px 10px 10px rgb(195, 136, 27);
+}
+.card-text
+{
+    font-size: small !important;
+}
+.card-text-desc
+{
+    font-size: 12px !important;
+}
+.card-text-duration
+{
+    font-size: 12px !important;
+}
+.card-btn:hover
+{
+    color: white !important;
+}

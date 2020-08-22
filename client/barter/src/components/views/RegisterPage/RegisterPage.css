@@ -1,0 +1,15 @@
+.orange{
+    
+        background-color: #FF8200; 
+    }
+
+    .button{
+        background-color: #0A0903;
+        color: white;
+        border-radius: 5px ;
+        margin-top: 10px;
+        width: 100px;
+        box-shadow: none;
+        border: none
+        
+    }
