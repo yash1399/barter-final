@@ -6,7 +6,7 @@ const cors = require('cors')
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-const config = require("./config/key");
+const config = require("./config/keys");
 
 // const mongoose = require("mongoose");
 // mongoose
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use('/api/users', require('./routes/users'));
+app.use('/api/users', require('./routes/user'));
 app.use('/api/product', require('./routes/product'));
 
 
