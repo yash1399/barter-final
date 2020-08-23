@@ -33,8 +33,7 @@ app.use('/api/product', require('./routes/product'));
 //https://stackoverflow.com/questions/48914987/send-image-path-from-node-js-express-server-to-react-client
 app.use('/uploads', express.static('uploads'));
 
-// Serve static assets if in production
-if (process.env.NODE_ENV === "production") {
+// Serve static assets if in productio
 
   // Set static folder
   app.use(express.static("client/barter/build"));
@@ -43,7 +42,7 @@ if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client/barter", "build", "index.html"));
   });
-}
+
 
 const port = process.env.PORT || 5000
 
