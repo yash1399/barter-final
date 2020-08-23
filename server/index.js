@@ -40,7 +40,7 @@ app.use('/uploads', express.static('uploads'));
 
   // index.html for all page routes
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client/barter", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../client/barter/build", "build", "index.html"));
   });
 
 
