@@ -73,7 +73,7 @@ function UploadProductPage(props) {
 
         }
 
-        Axios.post('/api/product/uploadProduct', variables)
+        Axios.post('http://api.barterit.tk/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
                     alert('Product Successfully Uploaded')

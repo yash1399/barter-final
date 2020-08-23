@@ -11,7 +11,7 @@ import {
 import { USER_SERVER } from '../components/Config.js';
 
 export function registerUser(dataToSubmit) {
-    const request = axios.post(`${USER_SERVER}/register`, dataToSubmit)
+    const request = axios.post(`http://api.barterit.tk/register`, dataToSubmit)
         .then(response => response.data);
 
     return {
@@ -21,7 +21,7 @@ export function registerUser(dataToSubmit) {
 }
 
 export function loginUser(dataToSubmit) {
-    const request = axios.post(`${USER_SERVER}/login`, dataToSubmit)
+    const request = axios.post(`http://api.barterit.tk/login`, dataToSubmit)
         .then(response => response.data);
 
     return {
@@ -31,7 +31,7 @@ export function loginUser(dataToSubmit) {
 }
 
 export function auth() {
-    const request = axios.get(`${USER_SERVER}/auth`)
+    const request = axios.get(`http://api.barterit.tk/auth`)
         .then(response => response.data);
 
     return {
@@ -41,7 +41,7 @@ export function auth() {
 }
 
 export function logoutUser() {
-    const request = axios.get(`${USER_SERVER}/logout`)
+    const request = axios.get(`http://api.barterit.tk/logout`)
         .then(response => response.data);
 
     return {
@@ -52,7 +52,7 @@ export function logoutUser() {
 
 
 export function addToCart(_id) {
-    const request = axios.get(`${USER_SERVER}/addToCart?productId=${_id}`)
+    const request = axios.get(`http://api.barterit.tk/addToCart?productId=${_id}`)
         .then(response => response.data);
 
     return {
@@ -64,7 +64,7 @@ export function addToCart(_id) {
 
 
 export function getCartItems(cartItems, userCart) {
-    const request = axios.get(`/api/product/products_by_id?id=${cartItems}&type=array`)
+    const request = axios.get(`http://api.barterit.tk/products_by_id?id=${cartItems}&type=array`)
         .then(response => {
 
 
@@ -92,7 +92,7 @@ export function getCartItems(cartItems, userCart) {
 
 
 export function removeCartItem(id) {
-    const request = axios.get(`/api/users/removeFromCart?_id=${id}`)
+    const request = axios.get(`http://api.barterit.tk/removeFromCart?_id=${id}`)
         .then(response => {
 
             response.data.cart.forEach(item => {
