@@ -22,7 +22,8 @@ function RightMenu(props) {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-        <Nav>
+      <Nav>
+        <Nav.Link className="nav-link-about " href="/about-us">About Us</Nav.Link>
         <Button className="nav-button mx-2" variants="custom" href="/register">Register</Button>
         <Button className="nav-button" variant="custom" href="/login">Log-in</Button>
         </Nav>

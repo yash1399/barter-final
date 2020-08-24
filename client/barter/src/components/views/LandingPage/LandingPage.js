@@ -32,7 +32,7 @@ function LandingPage() {
     }, [])
 
     const getProducts = (variables) => {
-        Axios.post('api.barterit.tk/getProducts', variables)
+        Axios.post('http://api.barterit.tk/api/product/getProducts', variables)
             .then(response => {
                 if (response.data.success) {
                     if (variables.loadMore) {

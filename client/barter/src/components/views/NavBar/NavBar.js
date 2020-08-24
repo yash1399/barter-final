@@ -19,7 +19,7 @@ function NavBar() {
     <>
     <div className="Container">
       <Navbar  collapseOnSelect sticky='top' expand='lg'className="navbar-top">
-        <Navbar.Brand href="/home-page">BARTER</Navbar.Brand>
+        <Navbar.Brand href="/">BARTER</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="nav-item ml-auto">

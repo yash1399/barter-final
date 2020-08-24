@@ -11,6 +11,7 @@ import Footer from "../components/views/Footer/Footer"
 import UploadProductPage from '../components/views/UploadProductPage/UploadProductPage'
 import DetailProductPage from '../components/views/DetailedProduct/DetailProductPage';
 import CartPage from '../components/views/CartPage/CartPage';
+import AboutUs from './views/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+          <Route exact path="/about-us" component={Auth(AboutUs, null)} />
           <Route exact path="/product/upload" component={Auth(UploadProductPage, true)} />
           <Route exact path="/product/:productId" component={Auth(DetailProductPage, null)} />
           <Route exact path="/user/connection" component={Auth(CartPage, true)} />

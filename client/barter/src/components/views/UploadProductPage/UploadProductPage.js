@@ -28,24 +28,7 @@ function UploadProductPage(props) {
 
     const [Images, setImages] = useState([])
 
-    // const onTitleChange = (event) => {
-    //     setTitleValue(event.currentTarget.value);
-    // }
-
-    // const onDescriptionChange = (event) => {
-    //     setDescriptionValue(event.currentTarget.value);
-    // }
-
-    // const onDurationChange = (event) => {
-    //     setDuration(event.currentTarget.value);
-    // }
-
-    // const onBarterChange = (event) => {
-    //     setBaterItemValue(event.currentTarget.value);
-    // }
-    // const onCategoryChange = (event) => {
-    //     setCategoryChange(event.currentTarget.value)
-    // }
+   
 
 
     const updateImages = (newImages) => {
@@ -73,7 +56,7 @@ function UploadProductPage(props) {
 
         }
 
-        Axios.post('http://api.barterit.tk/uploadProduct', variables)
+        Axios.post('http://api.barterit.tk/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
                     alert('Product Successfully Uploaded')
