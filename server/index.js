@@ -19,7 +19,7 @@ const connect = mongoose.connect('http://localhost:27017/barterit', { useNewUrlP
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
-app.use(cors())
+app.use(cors({origin: true }))
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
