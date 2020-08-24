@@ -15,11 +15,11 @@ const config = require("./config/keys");
 //   .catch(err => console.error(err));
 
 const mongoose = require("mongoose");
-const connect = mongoose.connect('http://localhost:27017/barterit', { useNewUrlParser: true, useUnifiedTopology: true })
+const connect = mongoose.connect(config.mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
-app.use(cors({origin: true }))
+app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
